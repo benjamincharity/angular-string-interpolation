@@ -78,10 +78,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	function InterpolationDirective() {
 	    'ngInject';
 	
-	    // TODO: Make directive work as an attribute also?
-	
 	    var directive = {
-	        restrict: 'E',
+	        restrict: 'EA',
 	        replace: true,
 	        scope: {},
 	        bindToController: {
