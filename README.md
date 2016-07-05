@@ -41,12 +41,12 @@ bower install angular-string-interpolation --save
 
 ```html
 <bc-interpolate
-  bc-string="Two incredibly useful libraries are ${0} and ${1}."
-  bc-array="['lodash', 'moment']"
+  bc-string="Who is ${0} without ${1}?"
+  bc-array="['Statler', 'Waldorf']"
 ></bc-interpolate>
 
 <!-- Output:
-  Two incredibly useful libraries are lodash and moment.
+  Who is Statler without Waldorf?
 -->
 ```
 
@@ -63,4 +63,5 @@ bower install angular-string-interpolation --save
 
 
 [issues]: https://github.com/benjamincharity/angular-string-interpolation/issues
+[demo_simple]: http://plnkr.co/edit/xo9I6K?p=preview
 

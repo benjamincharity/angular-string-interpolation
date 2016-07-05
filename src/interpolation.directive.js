@@ -4,9 +4,8 @@ export function InterpolationDirective(
 ) {
     'ngInject';
 
-    // TODO: Make directive work as an attribute also?
     const directive = {
-        restrict: 'E',
+        restrict: 'EA',
         replace: true,
         scope: {},
         bindToController: {
