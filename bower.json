@@ -1,0 +1,28 @@
+{
+  "version": "0.1.0",
+  "name": "angular-string-interpolation",
+  "description": "A simple module that allows you to inject content into strings.",
+  "homepage": "https://github.com/benjamincharity/angular-string-interpolation",
+  "authors": [
+    "Benjamin Charity <ben@benjamincharity.com>"
+  ],
+  "license": "MIT",
+  "main": "dist/angular-string-interpolation.js",
+  "keywords": [
+    "angular",
+    "string",
+    "interpolation",
+    "interpolate"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0"
+  },
+  "ignore": [
+    "**/.*",
+    "src",
+    "node_modules",
+    "package.json",
+    "webpack.config.js"
+  ]
+}
+
