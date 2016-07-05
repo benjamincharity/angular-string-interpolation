@@ -3,8 +3,8 @@
 **NOTE:** Full documentation coming soon!
 
 
-TODO: Add quick demo here with images or gif.
-TODO: Add 'why'. (missing functionality from ES6 string literals)
+- TODO: Add quick demo here with images or gif.
+- TODO: Add 'why'. (missing functionality from ES6 string literals)
 
 
 _[Comments and Pull Requests welcome!][issues]_
