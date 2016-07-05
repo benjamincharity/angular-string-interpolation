@@ -36,19 +36,44 @@ bower install angular-string-interpolation --save
 - Angular.js (~1.4.0)
 
 
+
+
 ## Usage
 
+Include `bc.AngularStringInterpolation` as a dependency in your project.
+
+```javascript
+angular.module('YourModule', ['bc.AngularStringInterpolation']);
+```
+
+Use the directive as an element or as an attribute:
 
 ```html
+<!-- As an element -->
 <bc-interpolate
   bc-string="Who is ${0} without ${1}?"
   bc-array="['Statler', 'Waldorf']"
 ></bc-interpolate>
 
+<!-- Or as an attribute -->
+<div bc-interpolate
+  bc-string="Who is ${0} without ${1}?"
+  bc-array="['Statler', 'Waldorf']"
+></div>
+
 <!-- Output:
   Who is Statler without Waldorf?
 -->
 ```
+
+
+## Options
+
+
+### `bc-string`
+
+
+### `bc-array`
 
 
 
