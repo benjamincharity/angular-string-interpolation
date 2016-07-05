@@ -1,5 +1,8 @@
 # angular-string-interpolation
 
+**NOTE:** This is not ready for production use.
+
+
 TODO: Add quick demo here with images or gif.
 
 
@@ -11,7 +14,6 @@ _[Comments and Pull Requests welcome!][issues]_
 - [Installation](#installation)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
-- [Foo](#foo)
 - [Development](#development)
 
 
@@ -35,6 +37,17 @@ bower install angular-string-interpolation --save
 
 ## Usage
 
+
+```html
+<bc-interpolate
+  bc-string="Two incredibly useful libraries are {{0}} and {{1}}."
+  bc-array="['lodash', 'moment']"
+></bc-interpolate>
+
+<!-- Output:
+  Two incredibly useful libraries are lodash and moment.
+-->
+```
 
 
 
