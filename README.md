@@ -56,10 +56,8 @@ bower install angular-string-interpolation --save
 
 - `npm run build` - Build JS/CSS/HTML/SVG
 - `npm run build:js` - Build JS
-- `npm run build:css` - Build CSS
-- `npm run watch:css` - Watch CSS and rebuild on change
 - `npm run watch:js` - Watch JS/HTML and rebuild on change
-- `npm run watch` - Watch JS/CSS/HTML and rebuild on change
+- `npm run watch` - Watch JS/HTML and rebuild on change
 
 
 
