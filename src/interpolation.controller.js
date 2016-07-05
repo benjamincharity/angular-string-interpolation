@@ -30,7 +30,7 @@ export class InterpolationController {
      * @return {String} text (interpolated)
      */
     interpolate(text, array) {
-        const regex = /{{(.*?)}}/g;
+        const regex = /\${(.*?)}/g;
         const length = array.length;
 
         // Loop through the array of replacement items
