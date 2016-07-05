@@ -41,7 +41,7 @@ bower install angular-string-interpolation --save
 
 ```html
 <bc-interpolate
-  bc-string="Two incredibly useful libraries are {{0}} and {{1}}."
+  bc-string="Two incredibly useful libraries are ${0} and ${1}."
   bc-array="['lodash', 'moment']"
 ></bc-interpolate>
 

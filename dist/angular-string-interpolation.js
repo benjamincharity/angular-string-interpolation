@@ -144,7 +144,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }, {
 	        key: 'interpolate',
 	        value: function interpolate(text, array) {
-	            var regex = /{{(.*?)}}/g;
+	            var regex = /\${(.*?)}/g;
 	            var length = array.length;
 	
 	            // Loop through the array of replacement items
