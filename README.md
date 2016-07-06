@@ -3,6 +3,7 @@
 **NOTE:** Full documentation coming soon!
 
 
+
 - TODO: Add quick demo here with images or gif.
 - TODO: Add 'why'. (missing functionality from ES6 string literals)
 
@@ -36,10 +37,20 @@ bower install angular-string-interpolation --save
 - Angular.js (~1.4.0)
 
 
+
+
 ## Usage
 
+Include `bc.AngularStringInterpolation` as a dependency in your project.
+
+```javascript
+angular.module('YourModule', ['bc.AngularStringInterpolation']);
+```
+
+Use the directive as an element or as an attribute:
 
 ```html
+<!-- As an element -->
 <bc-interpolate
   bc-string="Who is ${0} without ${1}?"
   bc-array="['Statler', 'Waldorf']"
@@ -47,6 +58,119 @@ bower install angular-string-interpolation --save
 
 <!-- Output:
   Who is Statler without Waldorf?
+-->
+
+<!-- Or as an attribute -->
+<div bc-interpolate
+  bc-string="Who is ${1} without ${0}?"
+  bc-array="['Calvin', 'Hobbes']"
+></div>
+
+<!-- Output:
+  Who is Hobbes without Calvin?
+-->
+```
+
+
+### How Replacement Works
+
+This module uses the same basic format as [ES6 template strings][template_strings]: `${0}`. Rather
+than naming the custom variables as you would with template strings, these placeholders simply take
+an integer for each replacement with the first replacement starting with `0`. These numbers will be
+used to get the correct content from the passed in array.
+
+```html
+<bc-interpolate
+  bc-string="Item 0 matches ${0}, item 1 matches ${1}, etc..."
+  bc-array="['ZERO', 'ONE']"
+></bc-interpolate>
+
+<!-- Output:
+  Item 0 matches ZERO, item 2 matches ONE, etc...
+-->
+```
+
+You can use as many instances of a placeholder as needed:
+
+```html
+<bc-interpolate
+  bc-string="How much ${0} would a woodchuck ${1} if a ${0} ${1} could ${1} ${0}?"
+  bc-array="['wood', 'chuck']"
+></bc-interpolate>
+
+<!-- Output:
+  How much wood would a woodchuck chuck if a wood chuck could chuck wood?
+-->
+```
+
+
+### `bc-string`
+
+This custom attribute accepts a **string** containing the items to be replaced.
+
+```javascript
+// You can define all the content inside your controller
+this.myString = 'You have ${0} dollars in your ${1} account.';
+```
+
+```html
+<bc-interpolate
+  bc-string="{{ vm.myString }}"
+  bc-array="['200', 'checking']"
+></bc-interpolate>
+
+<!-- Output:
+  You have 200 dollars in your checking account.
+-->
+```
+
+Or pass a string directly to the attribute:
+
+```html
+<bc-interpolate
+  bc-string="Who is ${0} without ${1}?"
+  bc-array="['Garth', 'Wayne']"
+></bc-interpolate>
+
+<!-- Output:
+  Who is Garth without Wayne?
+-->
+```
+
+
+### `bc-array`
+
+This custom attribute accepts an **array** containing the items to be injected into the placeholders. As
+with [`bc-string`](#bc-string) you can define items in the controller or directly in the DOM.
+
+```javascript
+// You can define the content inside your controller
+const remainingCredits = 12;
+const expiration = 'Aug 31st, 2016';
+this.replacements = [remainingCredits, expiration];
+```
+
+```html
+<bc-interpolate
+  bc-string="You have ${0} credits remaining until ${1}."
+  bc-array="vm.replacements"
+></bc-interpolate>
+
+<!-- Output:
+  You have 200 dollars in your checking account.
+-->
+```
+
+Or pass an array directly to the attribute:
+
+```html
+<bc-interpolate
+  bc-string="Who is ${0} without ${1}?"
+  bc-array="['Bullwinkle', 'Rocky']"
+></div>
+
+<!-- Output:
+  Who is Bullwinkle without Rocky?
 -->
 ```
 
@@ -64,4 +188,5 @@ bower install angular-string-interpolation --save
 
 [issues]: https://github.com/benjamincharity/angular-string-interpolation/issues
 [demo_simple]: http://plnkr.co/edit/xo9I6K?p=preview
+[template_strings]: https://developers.google.com/web/updates/2015/01/ES6-Template-Strings
 
