@@ -1,12 +1,12 @@
 # angular-string-interpolation
 
-**NOTE:** Full documentation coming soon!
+This module was created to help separate a projects copy from the project DOM. Currently you can
+easily abstract static text out into a `constant` or config but if that abstracted string needs any
+dynamic information you will be forced to split the copy up into many smaller parts or simply leave
+the copy directly in the DOM.
 
-
-
-- TODO: Add quick demo here with images or gif.
-- TODO: Add 'why'. (missing functionality from ES6 string literals)
-
+This module allows you to keep your raw copy out of the DOM while still allowing you to use dynamic
+data.
 
 _[Comments and Pull Requests welcome!][issues]_
 
@@ -16,6 +16,10 @@ _[Comments and Pull Requests welcome!][issues]_
 - [Installation](#installation)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
+- [How Replacement Works](#howreplacementworks)
+- [Directive](#directive)
+  - [`bc-string`](#bc-string)
+  - [`bc-array`](#bc-array)
 - [Development](#development)
 
 
@@ -32,11 +36,14 @@ npm install angular-string-interpolation --save
 bower install angular-string-interpolation --save
 ```
 
+#### Manually
+```html
+<script src="path/to/directory/dist/angular-string-interpolation.js"></script>
+```
+
 ## Dependencies
 
 - Angular.js (~1.4.0)
-
-
 
 
 ## Usage
@@ -45,30 +52,6 @@ Include `bc.AngularStringInterpolation` as a dependency in your project.
 
 ```javascript
 angular.module('YourModule', ['bc.AngularStringInterpolation']);
-```
-
-Use the directive as an element or as an attribute:
-
-```html
-<!-- As an element -->
-<bc-interpolate
-  bc-string="Who is ${0} without ${1}?"
-  bc-array="['Statler', 'Waldorf']"
-></bc-interpolate>
-
-<!-- Output:
-  Who is Statler without Waldorf?
--->
-
-<!-- Or as an attribute -->
-<div bc-interpolate
-  bc-string="Who is ${1} without ${0}?"
-  bc-array="['Calvin', 'Hobbes']"
-></div>
-
-<!-- Output:
-  Who is Hobbes without Calvin?
--->
 ```
 
 
@@ -104,7 +87,34 @@ You can use as many instances of a placeholder as needed:
 ```
 
 
-### `bc-string`
+### Directive
+
+Use the directive as an element or as an attribute:
+
+```html
+<!-- As an element -->
+<bc-interpolate
+  bc-string="Who is ${0} without ${1}?"
+  bc-array="['Statler', 'Waldorf']"
+></bc-interpolate>
+
+<!-- Output:
+  Who is Statler without Waldorf?
+-->
+
+<!-- Or as an attribute -->
+<div bc-interpolate
+  bc-string="Who is ${1} without ${0}?"
+  bc-array="['Calvin', 'Hobbes']"
+></div>
+
+<!-- Output:
+  Who is Hobbes without Calvin?
+-->
+```
+
+
+#### `bc-string`
 
 This custom attribute accepts a **string** containing the items to be replaced.
 
@@ -138,7 +148,7 @@ Or pass a string directly to the attribute:
 ```
 
 
-### `bc-array`
+#### `bc-array`
 
 This custom attribute accepts an **array** containing the items to be injected into the placeholders. As
 with [`bc-string`](#bc-string) you can define items in the controller or directly in the DOM.
