@@ -15,8 +15,8 @@ _[Comments and Pull Requests welcome!][issues]_
 
 - [Installation](#installation)
 - [Dependencies](#dependencies)
-- [Usage](#usage)
 - [How Replacement Works](#howreplacementworks)
+- [Usage](#usage)
 - [Directive](#directive)
   - [`bc-string`](#bc-string)
   - [`bc-array`](#bc-array)
@@ -36,7 +36,7 @@ npm install angular-string-interpolation --save
 bower install angular-string-interpolation --save
 ```
 
-#### Manually
+#### Manual
 ```html
 <script src="path/to/directory/dist/angular-string-interpolation.js"></script>
 ```
@@ -44,15 +44,6 @@ bower install angular-string-interpolation --save
 ## Dependencies
 
 - Angular.js (~1.4.0)
-
-
-## Usage
-
-Include `bc.AngularStringInterpolation` as a dependency in your project.
-
-```javascript
-angular.module('YourModule', ['bc.AngularStringInterpolation']);
-```
 
 
 ### How Replacement Works
@@ -84,6 +75,15 @@ You can use as many instances of a placeholder as needed:
 <!-- Output:
   How much wood would a woodchuck chuck if a wood chuck could chuck wood?
 -->
+```
+
+
+## Usage
+
+Include `bc.AngularStringInterpolation` as a dependency in your project.
+
+```javascript
+angular.module('YourModule', ['bc.AngularStringInterpolation']);
 ```
 
 
