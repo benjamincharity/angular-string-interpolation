@@ -8,6 +8,8 @@ the copy directly in the DOM.
 This module allows you to keep your raw copy out of the DOM while still allowing you to use dynamic
 data.
 
+[**Plunker Demo**][demo_simple]
+
 _[Comments and Pull Requests welcome!][issues]_
 
 
