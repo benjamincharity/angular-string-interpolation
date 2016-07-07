@@ -1,5 +1,4 @@
 {
-  "version": "1.0.1",
   "name": "angular-string-interpolation",
   "description": "A simple module that allows you to inject content into strings.",
   "homepage": "https://github.com/benjamincharity/angular-string-interpolation",
