@@ -5,6 +5,6 @@ import { InterpolationController } from './interpolation.controller';
 angular.module('bc.AngularStringInterpolation', [])
     .directive('bcInterpolate', InterpolationDirective)
     .controller('InterpolationController', InterpolationController)
-    .service('InterpolationService', InterpolationService)
+    .service('bcInterpolationService', InterpolationService)
 ;
 
