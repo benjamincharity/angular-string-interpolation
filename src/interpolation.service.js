@@ -21,7 +21,7 @@ export class InterpolationService {
         // Loop through the array of replacement items
         for (let i = 0; i < length; i += 1) {
             // Replace each matched item
-            text = text.replace(regex, convert)
+            text = text.replace(regex, convert);
         }
 
         // Custom conversion function
