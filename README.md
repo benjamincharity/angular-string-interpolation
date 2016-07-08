@@ -196,6 +196,16 @@ Or pass an array directly to the attribute:
 The interpolation method is exposed through `bcInterpolationService`. This allows you to interpolate
 text inside a controller, service or anywhere it is needed.
 
+##### Parameters
+
+- `string`: `{String}`
+  - A string containing placeholders (`${}`)
+- `values`: `{Array}`
+  - An array of values to replace the placeholders
+
+##### Returns `String`
+
+
 ```javascript
 // Controller Example
 
