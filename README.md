@@ -205,6 +205,7 @@ text inside a controller, service or anywhere it is needed.
 
 ##### Returns `String`
 
+[Service Plunker demo][demo_service]
 
 ```javascript
 // Controller Example
@@ -215,11 +216,11 @@ export class MyController() {
     'ngInject';
 
     // Define our string and the values to inject into the placeholders
-    this.rawString = 'You have ${0} credits remaining as of ${1}.';
+    this.string = 'You have ${0} credits remaining as of ${1}.';
     this.values = ['12', new Date()];
 
     // Pass both into the service to get back an interpolated string
-    this.string = bcInterpolationService.interpolate(rawString, values);
+    this.string = bcInterpolationService.interpolate(string, values);
 
   }
 }
@@ -231,6 +232,17 @@ export class MyController() {
 The interpolation method is also exposed through the `bcInterpolation` filter. This allows several
 uses.
 
+##### Parameters
+
+- `string`: `{String}`
+  - A string containing placeholders (`${}`)
+- `values`: `{Array}`
+  - An array of values to replace the placeholders
+
+##### Returns `String`
+
+[Filter Plunker demo][demo_filter]
+
 ```javascript
 // Controller Example
 
@@ -238,11 +250,11 @@ export class MyController() {
   constructor() {
 
     // Define our string and the values to inject into the placeholders
-    this.rawString = 'You have ${0} credits remaining as of ${1}.';
+    this.string = 'You have ${0} credits remaining as of ${1}.';
     this.values = ['12', new Date()];
 
     // Pass both into the filter to get back the interpolated string
-    this.filteredString = this.$filter('bcInterpolation')(rawString, values);
+    this.filteredString = this.$filter('bcInterpolation')(string, values);
 
     // Outputs:
     // "You have 12 credits remaining as of Fri Jul 08 2016 16:45:19 GMT-0400 (EDT)."
@@ -281,5 +293,7 @@ export class MyController() {
 
 [issues]: https://github.com/benjamincharity/angular-string-interpolation/issues
 [demo_simple]: http://plnkr.co/edit/xo9I6K?p=preview
+[demo_service]: http://plnkr.co/edit/XC3Ktp?p=preview
+[demo_filter]: http://plnkr.co/edit/DVE2W7?p=preview
 [template_strings]: https://developers.google.com/web/updates/2015/01/ES6-Template-Strings
 
