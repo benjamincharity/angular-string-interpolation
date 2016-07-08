@@ -9,10 +9,12 @@ fail_on_violations: true
 # Note: We must explicitly disable this (all supported, non-beta languages are reviewed by default)
 javascript:
   enabled: false
+  ignore_file: .eslintignore
 
 # Enable ESLint and point to the config file
 # Note: Since the ESLint plugin is in beta, we need to explicitly enable
 eslint:
-  enabled: true
+  enabled: false
   config_file: .eslintrc
+  ignore_file: .eslintignore
 

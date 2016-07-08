@@ -62,7 +62,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _interpolation3 = __webpack_require__(3);
 	
-	angular.module('bc.AngularStringInterpolation', []).directive('bcInterpolate', _interpolation2.InterpolationDirective).controller('InterpolationController', _interpolation3.InterpolationController).service('bcInterpolationService', _interpolation.InterpolationService);
+	var _interpolation4 = __webpack_require__(4);
+	
+	angular.module('bc.AngularStringInterpolation', []).directive('bcInterpolate', _interpolation2.InterpolationDirective).controller('InterpolationController', _interpolation3.InterpolationController).filter('bcInterpolation', _interpolation4.InterpolationFilter).service('bcInterpolationService', _interpolation.InterpolationService);
 
 /***/ },
 /* 1 */
@@ -198,6 +200,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    return InterpolationController;
 	}();
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	InterpolationFilter.$inject = ["bcInterpolationService"];
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.InterpolationFilter = InterpolationFilter;
+	function InterpolationFilter(bcInterpolationService) {
+	    'ngInject';
+	
+	    return interpolate;
+	
+	    /**
+	     * Interpolate a string
+	     *
+	     * @param {String} string Text to interpolate
+	     * @param {Array} values Values to inject into placeholders
+	     * @return {String} output
+	     */
+	    function interpolate(string, values) {
+	        var foo = 'unused';
+	        return bcInterpolationService.interpolate(string, values);
+	    }
+	}
 
 /***/ }
 /******/ ])
