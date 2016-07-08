@@ -1,12 +1,14 @@
 # angular-string-interpolation
 
-This module was created to help separate a projects copy from the project DOM. Currently you can
-easily abstract static text out into a `constant` or config but if that abstracted string needs any
-dynamic information you will be forced to split the copy up into many smaller parts or simply leave
-the copy directly in the DOM.
+`inˈtərpəˌlāt/ - verb: insert (something) between fixed points`
 
-This module allows you to keep your raw copy out of the DOM while still allowing you to use dynamic
-data.
+This module was created to help developers create a separation between the text for a project and
+the actual project code. Currently you can easily abstract static text out into a constant or
+configuration file, but if that abstracted string needs any dynamic information you will be forced
+to split the copy up into many smaller parts or simply leave the copy directly in the DOM.
+
+This module allows you to keep your marketing or interface copy out of the DOM while still allowing
+you to use dynamic data.
 
 [**Plunker Demo**][demo_simple]
 
