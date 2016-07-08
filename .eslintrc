@@ -17,7 +17,8 @@
     "module": true,
     "inject": true,
     "moment": false,
-    "_": false
+    "_": false,
+    "angular": false
   },
 
   "rules": {
@@ -45,7 +46,6 @@
     "space-before-function-paren": [2, "never"],
     "space-in-parens": [2, "never"],
     "spaced-comment": 0,
-    "no-var": 2,
     "prefer-const": 2,
     "max-len": [2, 100, 4, {
       "ignoreUrls": true
@@ -61,13 +61,9 @@
     "max-params": 0,
     "no-redeclare": 2,
     "no-magic-numbers": 2,
-    // Needed for angular
     "no-use-before-define": 0,
-    // Needed for angular
     "no-unused-vars": 0,
     "angular/log": 0,
-    // Disabled this since we uses classes for services
-    // http://www.michaelbromley.co.uk/blog/350/exploring-es6-classes-in-angularjs-1-x%20nice
     "angular/no-service-method": 0,
     semi: [2, "always"]
   }

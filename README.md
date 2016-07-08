@@ -24,6 +24,7 @@ _[Comments and Pull Requests welcome!][issues]_
 - [Directive](#directive)
   - [`bc-string`](#bc-string)
   - [`bc-array`](#bc-array)
+- [Service](#service)
 - [Development](#development)
 
 
@@ -188,6 +189,30 @@ Or pass an array directly to the attribute:
 -->
 ```
 
+
+## Service
+
+The interpolation method is exposed through `bcInterpolationService`. This allows you to interpolate
+text inside a controller, service or anywhere it is needed.
+
+```javascript
+// Controller Example
+
+export class MyController() {
+  // Inject the service into your controller
+  constructor(bcInterpolationService) {
+    'ngInject';
+
+    // Define our string and the values to inject into the placeholders
+    this.rawString = 'You have ${0} credits remaining as of ${1}.';
+    this.values = ['12', new Date()];
+
+    // Pass both into the service to get an interpolated string back
+    this.string = bcInterpolationService.interpolate(rawString, values);
+
+  }
+}
+```
 
 
 ## Development

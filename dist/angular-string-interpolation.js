@@ -225,7 +225,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @return {String} output
 	     */
 	    function interpolate(string, values) {
-	        var foo = 'unused';
 	        return bcInterpolationService.interpolate(string, values);
 	    }
 	}
