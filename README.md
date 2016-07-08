@@ -193,7 +193,7 @@ Or pass an array directly to the attribute:
 ## Service
 
 The interpolation method is exposed through `bcInterpolationService`. This allows you to interpolate
-text inside a controller, service or wherever else it is needed.
+text inside a controller, service or anywhere it is needed.
 
 ```javascript
 // Controller Example
