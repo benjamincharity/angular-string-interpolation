@@ -25,6 +25,7 @@ _[Comments and Pull Requests welcome!][issues]_
   - [`bc-string`](#bc-string)
   - [`bc-array`](#bc-array)
 - [Service](#service)
+- [Filter](#filter)
 - [Development](#development)
 
 
@@ -207,11 +208,54 @@ export class MyController() {
     this.rawString = 'You have ${0} credits remaining as of ${1}.';
     this.values = ['12', new Date()];
 
-    // Pass both into the service to get an interpolated string back
+    // Pass both into the service to get back an interpolated string
     this.string = bcInterpolationService.interpolate(rawString, values);
 
   }
 }
+```
+
+
+## Filter
+
+The interpolation method is also exposed through the `bcInterpolation` filter. This allows several
+uses.
+
+```javascript
+// Controller Example
+
+export class MyController() {
+  constructor() {
+
+    // Define our string and the values to inject into the placeholders
+    this.rawString = 'You have ${0} credits remaining as of ${1}.';
+    this.values = ['12', new Date()];
+
+    // Pass both into the filter to get back the interpolated string
+    this.filteredString = this.$filter('bcInterpolation')(rawString, values);
+
+    // Outputs:
+    // "You have 12 credits remaining as of Fri Jul 08 2016 16:45:19 GMT-0400 (EDT)."
+
+  }
+}
+```
+
+```html
+<p>
+  {{ vm.string | bcInterpolation:vm.values }}
+</p>
+
+<!-- or -->
+
+<p>
+  {{ "Neither ${0} nor ${1} nor ${2} nor gloom of ${3}..." |
+      bcInterpolation:['❄', '🌧', '🔥', '🌃'] }}
+</p>
+
+<!-- Outputs:
+  Neither ❄ nor 🌧 nor 🔥 nor gloom of 🌃...
+-->
 ```
 
 
