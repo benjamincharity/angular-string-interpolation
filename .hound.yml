@@ -16,6 +16,3 @@ eslint:
   enabled: true
   config_file: .eslintrc
 
-# Point to the SCSSLint config file
-scss:
-  config_file: .scss-style.yml
