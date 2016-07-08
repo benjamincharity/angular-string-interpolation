@@ -9,6 +9,10 @@
     "modules": true
   },
 
+  "parserOptions": {
+    "sourceType": "module"
+  },
+
   "globals": {
     "module": true,
     "inject": true,
