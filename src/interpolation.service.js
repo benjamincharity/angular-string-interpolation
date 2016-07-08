@@ -14,12 +14,12 @@ export class InterpolationService {
      */
     interpolate(text, array) {
         // Define a regex to look for our custom tag `${}`
-        const regex = /\${(.*?)}/g;
+        var regex = /\${(.*?)}/g;
         // Cache the array length
         const length = array.length;
 
         // Loop through the array of replacement items
-        for (let i = 0; i < length; i += 1) {
+        for(let i = 0; i < length; i += 1) {
             // Replace each matched item
             text = text.replace(regex, convert)
         }
@@ -31,7 +31,7 @@ export class InterpolationService {
             return array[p1];
         }
 
-        return text;
+        return text
     }
 
 
