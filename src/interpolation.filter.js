@@ -14,8 +14,7 @@ export function InterpolationFilter(
      * @return {String} output
      */
     function interpolate(string, values) {
-        var foo = 'unused'
-        return bcInterpolationService.interpolate(string, values)
+        return bcInterpolationService.interpolate(string, values);
     }
 
 }
