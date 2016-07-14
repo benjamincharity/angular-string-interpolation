@@ -14,7 +14,7 @@ javascript:
 # Enable ESLint and point to the config file
 # Note: Since the ESLint plugin is in beta, we need to explicitly enable
 eslint:
-  enabled: false
+  enabled: true
   config_file: .eslintrc
   ignore_file: .eslintignore
 
