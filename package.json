@@ -27,7 +27,7 @@
     "url": "https://github.com/benjamincharity/MY_LIBRARY.git"
   },
   "dependencies": {
-    "webpack-dev-server": "^1.14.1"
+    "angular": "^1.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
@@ -53,6 +53,7 @@
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.5.1",
     "sass-loader": "^3.1.2",
-    "source-map": "^0.5.3"
+    "source-map": "^0.5.3",
+    "webpack-dev-server": "^1.14.1"
   }
 }
