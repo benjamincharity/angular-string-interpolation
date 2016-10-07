@@ -10,7 +10,7 @@ to split the copy up into many smaller parts or leave the copy directly in the D
 This module allows you to keep marketing or interface copy out of the DOM while still allowing you
 to use dynamic data.
 
-[**Plunker Demo**][demo_simple]
+> [:tv: **All Demos**][demo_collection]
 
 _[Comments and Pull Requests welcome!][issues]_
 
@@ -119,6 +119,7 @@ Use the directive as an element or as an attribute:
 -->
 ```
 
+> [:tv: Directive demo][demo_directive]
 
 #### `bc-string`
 
@@ -205,7 +206,7 @@ text inside a controller, service or anywhere it is needed.
 
 ##### Returns `String`
 
-[Service Plunker demo][demo_service]
+> [:tv: Service demo][demo_service]
 
 ```javascript
 // Controller Example
@@ -241,7 +242,7 @@ uses.
 
 ##### Returns `String`
 
-[Filter Plunker demo][demo_filter]
+> [:tv: Filter demo][demo_filter]
 
 ```javascript
 // Controller Example
@@ -292,8 +293,9 @@ export class MyController() {
 
 
 [issues]: https://github.com/benjamincharity/angular-string-interpolation/issues
-[demo_simple]: http://plnkr.co/edit/xo9I6K?p=preview
-[demo_service]: http://plnkr.co/edit/XC3Ktp?p=preview
-[demo_filter]: http://plnkr.co/edit/DVE2W7?p=preview
+[demo_directive]: http://codepen.io/benjamincharity/pen/xEYYZX?editors=0010
+[demo_service]: https://codepen.io/benjamincharity/pen/NRyYjx?editors=0010
+[demo_filter]: https://codepen.io/benjamincharity/pen/BLYAdy?editors=0010
+[demo_collection]: https://codepen.io/collection/AMrxJP/
 [template_strings]: https://developers.google.com/web/updates/2015/01/ES6-Template-Strings
 
