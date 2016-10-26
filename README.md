@@ -1,5 +1,7 @@
 # angular-string-interpolation
 
+[![MIT License][license_image]][license_url] [![NPM version][npm_version_image]][npm_url]
+
 `inˈtərpəˌlāt/ - verb: insert (something) between fixed points`
 
 This module was created to help developers create a separation between the text for a project and
@@ -299,3 +301,7 @@ export class MyController() {
 [demo_collection]: https://codepen.io/collection/AMrxJP/
 [template_strings]: https://developers.google.com/web/updates/2015/01/ES6-Template-Strings
 
+[license_image]: http://img.shields.io/badge/license-MIT-blue.svg
+[license_url]: LICENSE
+[npm_url]: https://npmjs.org/package/angular-string-interpolation
+[npm_version_image]: http://img.shields.io/npm/v/angular-string-interpolation.svg
